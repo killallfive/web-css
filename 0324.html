@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web存储</title>
+</head>
+<body>
+    <div class="above">
+        <input type="text" id="content" placeholder="请输入想查找的商品" style="width: 250px;height: 40px;">
+        <input type="button" value="搜索" style="color:rgb(182, 176, 176);height: 40px;width: 140px;" onclick="saveStorage('content')">
+        <p style="margin-top: 0px;">最近搜索</p>
+        <div id="msg"></div>
+        <div style="float: right;display: block;margin-right: 15px;margin-top: 30px;"><input type="button" value="X" style="background-color:gainsboro;color: white;" onclick="clearStorage('msg');"></div>
+    </div>
+</body>
+<script>
+    if(!window.loadStorage) {
+        alert("浏览器不支持localStorage");
+        // return false;
+    }
+    function saveStorage(id) {
+        var time = new Date().getTime();
+        var data = document.getElementById(id).value;
+        localStorage.setItem(time, data);
+        // alert("正在搜索中，请稍后......");
+        loadStorage('msg');
+    }
+    function loadStorage(id) {
+        for (var i = 0; i < localStorage.length; i++) {
+            var result = '<div style="background-color:gainsboro;float: left;display: block;margin-bottom:10px;">';
+            var key = localStorage.key(i);
+            var value = localStorage.getItem(key);
+            result = result + value + '</div>' + '<div style="background-color:white;width:20px;height:26px;float: left;display: block;">' + '</div>';
+        }
+        var obj = document.getElementById(id);
+        obj.innerHTML += result;
+    }
+    function clearStorage() {
+        localStorage.clear();
+        alert("全部数据被清除");
+        document.getElementById("msg").innerHTML = '';
+    }
+</script>
+<style>
+    .above{
+        width: 450px;
+        height: 200px;
+        padding-top: 10px;
+        padding-left: 10px;
+        overflow: hidden;
+        box-shadow:5px 5px 5px gainsboro,5px -5px 5px gainsboro,-5px 5px 5px gainsboro,-5px -5px 5px gainsboro;
+    }
+    #msg{
+        float: left;
+        display: block;
+        background-color: white;
+        width: 380px;
+        line-height: 1.5;
+        font-size: 16px;
+        overflow: hidden;
+    }
+</style>
+</html>
