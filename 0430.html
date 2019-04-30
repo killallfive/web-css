@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="400px" height="250px"></canvas>
+</body>
+<script>
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    init();
+    function init() {
+        context.fillStyle = "#ddd";
+        context.fillRect(0, 0, 400, 250);
+        canvas.style.background = 'url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556601868102&di=831779d2b3cd7df2083a5b0ea062259f&imgtype=0&src=http%3A%2F%2F365jia.cn%2Fuploads%2Fmobile%2Faction%2F201706%2F.594896b582252t460x330f.jpg) no-repeat center';
+        canvas.style.backgroundSize = "100% 100%";
+        context.lineWidth = 40;
+        context.lineJoin = "round";
+    }
+    canvas.addEventListener('mousedown', mouseDown, false);
+	canvas.addEventListener('mousemove', mouseMove, false);
+	canvas.addEventListener('mouseup', mouseUp, false);
+	var isDrawing; 
+	var startX = 0;
+	var startY = 0; 
+    function mouseDown(e) {
+		isDrawing = true;
+		startX = e.layerX;
+		startY = e.layerY;
+	}
+	function mouseMove(e) {
+		if(isDrawing) {
+			var x = e.layerX;
+			var y = e.layerY;
+			context.globalCompositeOperation = "destination-out"; 
+			context.beginPath();
+			context.moveTo(startX, startY);
+			context.lineTo(x, y);
+			context.closePath(); 
+			context.stroke();
+
+			startX = x;
+			startY = y; 
+		} 
+	}
+	function mouseUp(e) {
+		isDrawing = false;
+		var k = 0;
+		var data = context.getImageData(0, 0, 400, 250).data;
+		var length = data.length;
+		for (var i = 0; i < length - 3; i += 4) {
+			if (data[i] == 0 && data[i + 1] == 0 && data[i + 2] == 0 && data[i + 3] == 0) {
+				k++;
+			}
+		}
+		if(k > 400 * 250 * 0.85) {
+			context.fillStyle = "blue";
+			context.fillRect(0, 0, 400, 250);
+		}
+	}
+</script>
+</html>
