@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .big {
+        width: 370px;
+        height: 460px;
+        border: 2px solid rgba(192, 185, 185, 0.651);
+        overflow: hidden;
+    }
+    .big:hover {
+        border-color: rgb(163, 163, 163);
+    }
+    .top_1 {
+        width: 370px;
+        height: 300px;
+        background-image: url(zhanqiao.jpg);
+        background-size:100% 100%;
+        background-repeat: no-repeat;
+    }
+    .top_2 {
+        width: 340px;
+        height: 180px;
+        padding-left: 30px;
+        position: relative;
+    }
+    #foot {
+        position: absolute;
+        top: 430px;
+        font-size: 13px;
+        color:  rgba(141, 136, 136, 0.651);
+        left: 40px;
+    }
+    .mark {
+        width: 50px;
+        height: 50px;
+        background: rgb(247, 161, 2);
+        position: absolute;
+        margin-top: 20px;
+        margin-left: 290px;
+        border-radius: 25px;
+        z-index: 1;
+    }
+    .mark span {
+        margin-top: 15px;
+        margin-left: 15px;
+        line-height: 3px;
+        font-size: 16px;
+        display: block;
+        color: white;
+    }
+    .pic {
+        width: 50px;
+        height: 25px;
+        font-size: 14px;
+        background: rgb(247, 161, 2);
+        position: absolute;
+        top: 285px;
+        line-height: 25px;
+        text-align: center;
+        color: white;
+    }
+    .big:hover > .pic {
+        transform: translateY(-110px);
+        transition-property: transform;
+        transition-duration: .20s;
+        transition-timing-function: linear;
+    }
+    #tx {
+        width: 300px;
+        height: 80px;
+        position: absolute;
+        float: left;
+        font-size: 15px;
+        top: 280px;
+        left: 40px;
+        color:  rgba(141, 136, 136, 0.651);
+        opacity: 0;  
+
+    }
+    .big:hover > .top_2 {
+        width: 340px;
+        height: 180px;
+        padding-left: 30px;
+        background: white;
+        transform: translateY(-130px);
+        transition-property: transform;
+        transition-duration: .20s;
+        transition-timing-function: linear;
+    }
+    .big:hover > #tx {
+        opacity: 1;
+        max-height: 0;
+        transition-property: transform;
+        transition-duration: .50s;
+        transition-timing-function: linear;
+    }
+    .big:hover > .top_1 {
+        opacity: 0.5;
+        transform: scale(1.2);
+        transition-duration: .30s;
+        transition-timing-function: linear;
+        background-position: center center;
+    }
+</style>
+<body>
+    <div class="big">
+        <div class="mark">
+            <span>15</span>
+            <span style="font-size:14px;margin-left: 12px;">五月</span>
+        </div>
+        <div class="top_1">
+        </div>
+        <div class="pic">照片</div>
+        <div class="top_2">
+            <h2>青岛栈道</h2>
+            <p style="font-size: 18px;color:orange">国家AAAA级旅游景区</p>
+        </div>
+        <span id="foot">10分钟前</span>
+        <span id="foot" style="left: 120px;">123 评论</span>
+        <div id="tx">
+            <p>青岛栈道是青岛滨海风景区的景点之一，是国务院于1982年首批公布的国家级风景名胜区。
+            青岛栈道位于游人如织的青岛中山路南端，桥身从海岸探入如弯月般的青岛湾深处。
+            桥身供游人参观并在此停靠旅游船，由此乘船可看海上青岛。</p>
+        </div>
+    </div>
+</body>
+</html>
