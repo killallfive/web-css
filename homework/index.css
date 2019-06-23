@@ -363,7 +363,7 @@ article {
 #smv {
     display: none;
 }
-#shope {
+#swish {
     display: none;
 }
 #s-footer {
@@ -610,103 +610,99 @@ article {
     .bwish {
         display: none;
     }
-    #shope{
+    #swish{
         background-image:url(英华逸游/img/back.png);
         background-size:cover;
         height:1800px;
         background-color:white;
         display: block;
     }
-    #shope-title{
+    #swish-title{
         margin-top: 5%;
     }
-    #shope-a{
+    #swish-a{
         height:20px;
         width: 3px;
          position: absolute;
          margin-top: 40px;
          background-color: #e8420a;
     }
-    #s-hope3{
+    #swish3{
         
         height:380px;
         margin: 0px;
         padding:0px;
     }
-    #s-hope3 img{
+    #swish3 img{
         width: 100%;
         height:380px;
         margin: 0px;
         padding:0px;
     }
-    #s-hope4{
+    #swish4{
         height:310px;
         margin: 0px;
         padding:0px;
     }
-    #s-hope4 h3{
+    #swish h3{
         text-align: center;
         margin-top: 10%
     }
-    #s-hope4 {
+    #swish4 {
         font-size: 18px;
     }
-    #s-hope{
-        margin: 0;
-        padding:0px;
-    }
-    #s-hope5 img{
+    #swish5 img{
         width:100%;
         height:320px;
     }
-    #s-hope6{
+    #swish6{
         height:130px;
         margin: 0;
         padding:0px;
     }
-    #s-hope6 h3{
+    #swish6 h3{
         text-align: center;
         margin-top:10%
     }
-    #s-hope7 {
+    #swish7 {
         height:160px;
         margin: 0;
         padding:0px;
         border-bottom:1px solid #e1e1e1;
     }
-    #s-hope7 img{
+    #swish7 img{
         margin-left: 15%;
         margin-top: 10%
     }
-    #s-hope7 div{
+    #swish7 div{
         margin-left:39%;
         margin-top:-69px
     }
-    #s-hope8{
+    #swish8{
         height:160px;
         margin: 0;
         padding:0px;
         border-bottom:1px solid #e1e1e1;
     }
-    #s-hope8 img{
+    #swish8 img{
         margin-left: 15%;
         margin-top: 10%
     }
-    #s-hope8 div{
+    #swish8 div{
         margin-left:39%;
         margin-top:-69px
     }
-    #s-hope9{
+    #swish9{
         height:160px;
         margin: 0;
         padding:0px;
         border-bottom:1px solid #e1e1e1;
     }
-    #s-hope9 img{
+    #swish9 img{
         margin-left: 15%;
         margin-top: 10%
     }
-    #s-hope9 div{
+    #swish9 div{
         margin-left:39%;
         margin-top:-69px
     }
