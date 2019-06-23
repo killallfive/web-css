@@ -310,14 +310,15 @@ article {
     margin-top: 60px;
     font-size: 15px;
 }
-.partner {
+.ptn {
     margin-top: 45px;
     color: white;
 }
-.partner dt {
+.ptn dt {
     width: 60px;
+    float: left;
 }
-.partner-logo a {
+.ptn-logo a {
     display: block;
     float: left;
     width: 120px;
@@ -328,19 +329,20 @@ article {
     color: white;
     line-height: 2em;
 }
-.hotlocation {
+.hloc {
     color: white;
 }
 
-.hotlocation dt {
+.hloc dt {
     width: 60px;
+    float: left;
 }
 
-.hotlocation dd {
+.hloc dd {
     margin-left: 80px;
 }
 
-.hotlocation dd a {
+.hloc dd a {
     margin-left: 10px;
     color: white;
     font-size: 14px;
@@ -355,8 +357,4 @@ article {
     color: white;
     font-size: 16px;
     margin-top: 44px;
-}
-
-.footer-foot h4 {
-    display: none;
 }
